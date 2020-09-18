@@ -1,7 +1,7 @@
 * Slide Options                           :noexport:
 # ======= Appear in cover-slide ====================
 #+TITLE: Introducción a Elixir Language
-#+SUBTITLE: creación, principales features, principales empresas que actualmente lo usan
+#+SUBTITLE: creación, principales features, empresas
 #+COMPANY: MakerLab
 #+AUTHOR: Albert Castellano Moreno
 #+EMAIL: acastemoreno@gmail.com
@@ -27,7 +27,7 @@
 - Alumno de Codeable (2do cohort)
 - Coach en MakerLab.
 - Software Enginneer en Able.
-- Experiencia en ELixir.
+- 6 Experiencia en Elixir.
   - Side-Projects y trabajos freelancer.
 
 * ¿Por qué fue creado?

@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
      title: 'Introducción a Elixir Language', 
-     subtitle: 'creación, principales features, principales empresas que actualmente lo usan', 
+     subtitle: 'creación, principales features, empresas', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.
