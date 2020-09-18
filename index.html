@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2020-09-18 vie 18:06 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Albert Castellano Moreno" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+<link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/elixir.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc234cd1" class="outline-2">
+<h2 id="orgc234cd1">Contexto</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white cover-image nobackground" style="background-image: url(images/long_time_ago.jpg)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-orgcf1e615" class="outline-2">
+<h2 id="orgcf1e615"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+NOT REALLY
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org74cd998" class="outline-2">
+<h2 id="org74cd998">la ley de moore deja de cumplirse, esta situacion es insostenible</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org0e399d8" class="figure">
+<p><img src="images/cpu0.jpg" alt="cpu0.jpg" height="400px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org0dc2891" class="outline-2">
+<h2 id="org0dc2891">nuevo reto: aprovechar array nucleos</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="orgc705a85" class="figure">
+<p><img src="images/array-procesadores.png" alt="array-procesadores.png" height="400px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org7275f9e" class="outline-2">
+<h2 id="org7275f9e">Concurrencia y paralelismo en Ruby</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org5f87c2e" class="figure">
+<p><img src="images/ruby_process.png" alt="ruby_process.png" height="370px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+solo para nota<sup>1</sup>
+solo para nota<sup>2</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="http://nathanmlong.com/2017/06/concurrency-vs-paralellism/">Recomendado: Concurrency vs Paralellism - Burrito shop context</a>
+</p>
+<p class="footpara">2. 
+<a href="https://www.youtube.com/watch?v=xoNRtWl4fZU&amp;feature=youtu.be&amp;t=4m44s">ElixirDaze 2016 - Processing 2.7 million images with Elixir (vs Ruby) by David Padilla</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc36b537" class="outline-2">
+<h2 id="orgc36b537">Sin considerar side effects (files, db, etc)</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org6d1cf30" class="figure">
+<p><img src="images/ruby_results.png" alt="ruby_results.png" height="420px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org8b0ea82" class="outline-2">
+<h2 id="org8b0ea82">debido a diferentes implementaciones de</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org6dacc7b" class="figure">
+<p><img src="images/threads-memory.png" alt="threads-memory.png" height="340px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org64542bd" class="outline-2">
+<h2 id="org64542bd">Dangerous Situation</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org4668459" class="figure">
+<p><img src="images/multithreaded_programming.jpg" alt="multithreaded_programming.jpg" height="340px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/padawan.jpeg)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org88376f5" class="outline-2">
+<h2 id="org88376f5"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein line-through" id="text-">
+<q>
+
+Hasta que un joven programador, parte de la core team de Ruby on Rails, aparecio.
+
+</q>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org685d126" class="outline-2">
+<h2 id="org685d126">Jose Valim</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org2adb057" class="figure">
+<p><img src="images/jose_valim.jpg" alt="jose_valim.jpg" height="400px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgbc9875d" class="outline-2">
+<h2 id="orgbc9875d">se encontro con un libro</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org176672a" class="figure">
+<p><img src="images/seven_language.jpg" alt="seven_language.jpg" height="420px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+solo para nota<sup>1</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://pragprog.com/book/btlang/seven-languages-in-seven-weeks">Seven languages in seven weeks</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/Erlang_logo.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org0a49955" class="outline-2">
+<h2 id="org0a49955"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/telefonista.jpg)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org06305c6" class="outline-2">
+<h2 id="org06305c6"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org9fb7c0a" class="outline-2">
+<h2 id="org9fb7c0a"><a href="https://www.youtube.com/watch?v=xrIjfIjssLE&amp;feature=youtu.be">Erlang The Movie - 1986</a></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="orgf0251a1" class="figure">
+<p><img src="images/erlang_the_movie.jpg" alt="erlang_the_movie.jpg" height="420px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein line-through" id="text-">
+<q>
+
+Una red telefonica siempre debera operar independientemente del numero simultaneo de llamadas, bugs inesperados, o llevandose actualizaciones de hardware y software.
+<br>
+– Saša Jurić, Elixir in Action
+
+</q>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein line-through" id="text-">
+<q>
+
+Jose Valim, empezo haciendo un port de Ruby en el ecosistema Erlang (aprovechar casi 40 años de desarrollo)
+<br>
+UPSS
+<br>
+Terminó creando un nuevo lenguaje.
+
+</q>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org6f8c2d4" class="outline-2">
+<h2 id="org6f8c2d4">Proceso de creación (2011)</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="orgd6ee941" class="figure">
+<p><img src="images/pineapple_pen.gif" alt="pineapple_pen.gif" height="420px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/logos.jpg)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org9bce3da" class="outline-2">
+<h2 id="org9bce3da"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc16d5e3" class="outline-2">
+<h2 id="orgc16d5e3">Ruby -&gt; Elixir (Developer Joy)</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org5051b63" class="figure">
+<p><img src="images/BOB-ROSS.jpg" alt="BOB-ROSS.jpg" height="400px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+solo para nota<sup>1</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+Bob Ross, pintor de "árboles felices" y del "placer de pintar
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org8c81f28" class="outline-2">
+<h2 id="org8c81f28">Erlang -&gt; Elixir (Runtime and 40 years of libraries)</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org59a8300" class="figure">
+<p><img src="images/erlang_elixir.png" alt="erlang_elixir.png" height="420px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org47ee6b4" class="outline-2">
+<h2 id="org47ee6b4">Clojure -&gt; Elixir (Metaprogramación)</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org8391b47" class="figure">
+<p><img src="images/metaprogramming.jpg" alt="metaprogramming.jpg" height="420px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+solo para nota<sup>1</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://pragprog.com/book/cmelixir/metaprogramming-elixir">Metaprogramming Elixir</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein line-through" id="text-">
+<q>
+
+Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and it wasn’t an accident.
+<br>
+–Devin Torres
+
+</q>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org5045d69" class="outline-2">
+<h2 id="org5045d69">Some Companies using Elixir</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white cover-image white_footer nobackground" style="background-image: url(images/companies/discord-elixir-banner.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-orgbd628e8" class="outline-2">
+<h2 id="orgbd628e8"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<aside class="note">
+  <section>
+<p>
+solo para nota<sup>1</sup>
+solo para nota<sup>2</sup>
+solo para nota<sup>3</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://content.nanobox.io/discord-elixir-concurrency-template-high-performance/">Discord's Use of Elixir to Handle Concurrency: A Template for Achieving High Performance</a>
+</p>
+<p class="footpara">2. 
+<a href="https://blog.discordapp.com/tagged/elixir">Discord Blog - Tag Elixir</a>
+</p>
+<p class="footpara">3. 
+<a href="https://www.youtube.com/watch?v=P89N1YJBjpA">ZenMonitor: Scaling Distributed Monitoring at Discord | Code BEAM SF 19</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgacbb1ea" class="outline-2">
+<h2 id="orgacbb1ea"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="orgf3401b4" class="figure">
+<p><img src="images/companies/toyota_connected_conf.png" alt="toyota_connected_conf.png" height="420px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+Nota9<sup>1</sup>
+Nota10<sup>2</sup>
+Nota11<sup>3</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://www.youtube.com/watch?v=37V6L1EA4ac">ElixirConf 2017 - Elixir The Toyota Way - Powell Kinney</a>
+</p>
+<p class="footpara">2. 
+<a href="https://codesync.global/media/elixir-powers-first-car-share-service-from-toyota/">Elixir powers first Car Share Service from Toyota</a>
+</p>
+<p class="footpara">3. 
+<a href="https://www.drivehui.com/">Hui - Proyecto de Toyota Connected que usa Elixir</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org861f539" class="outline-2">
+<h2 id="org861f539"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="orgb167eca" class="figure">
+<p><img src="images/companies/pinterest.jpeg" alt="pinterest.jpeg" height="320px" />
+</p>
+</div>
+</article>
+
+<ul>
+<li>200 servidores python a solo 4 con Elixir.</li>
+<li>30 instancias c32.xl con Java a solo 15 con Elixir<sup>1</sup>.</li>
+</ul>
+
+<aside class="note">
+  <section>
+<p>
+Nota13<sup>2</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://pragprog.com/book/tvmelixir/adopting-elixir">Adopting Elixir</a> - Pagina 13
+</p>
+<p class="footpara">2. 
+<a href="https://medium.com/@Pinterest_Engineering/introducing-new-open-source-tools-for-the-elixir-community-2f7bb0bb7d8c">Introducing new open-source tools for the Elixir community</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org28ce3a1" class="outline-2">
+<h2 id="org28ce3a1"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org73365c6" class="figure">
+<p><img src="images/companies/apc-schneider.jpg" alt="apc-schneider.jpg" height="420px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+Nota14<sup>1</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://github.com/se-apc">APC Github</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org7bc8a98" class="outline-2">
+<h2 id="org7bc8a98"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div id="org994e9a7" class="figure">
+<p><img src="images/companies/square_enix.png" alt="square_enix.png" height="420px" />
+</p>
+</div>
+</article>
+
+<aside class="note">
+  <section>
+<p>
+Nota15<sup>1</sup>
+</p>
+
+  </section>
+</aside>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="https://apply.workable.com/square-enix/j/DE5E1A81A1/">Job to apply - Back End Developer - Ruby / Elixir</a>
+</p>
+</footer>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-orgd5c4b42" class="outline-2">
+<h2 id="orgd5c4b42">Ruby vs Elixir</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/most_loved.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org74491e6" class="outline-2">
+<h2 id="org74491e6"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/most_dreaded.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-orga0a5172" class="outline-2">
+<h2 id="orga0a5172"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/most_wanted.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-orgdea1c6d" class="outline-2">
+<h2 id="orgdea1c6d"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/most_payed.png)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-orgaea7e98" class="outline-2">
+<h2 id="orgaea7e98"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class="fill white contain-image nobackground" style="background-image: url(images/graph-survey.svg)">
+<hgroup class="">
+       <h2 class="white "><div id="outline-container-org11d0545" class="outline-2">
+<h2 id="org11d0545"></h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein line-through" id="text-">
+<q>
+
+Manten un ojo en Elixir.
+<br>
+Crecera mucho mas.
+<br>
+Es relativamente sencillo aprender Elixir sabiendo Ruby.
+
+</q>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
+<aside class="gdbar right"><img src="images/elixir.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
+<h2>
+  <p>Thank You ʕ•ᴥ•ʔ</p>
+</h2>
+<br>
+<p class="auto-fadein" data-config-contact>
+</p>
+</article>
+
+</slide>
+<slide class="backdrop"></slide>
+</slides> 
+<script>
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', '----']);
+_gaq.push(['_trackPageview']); 
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>
