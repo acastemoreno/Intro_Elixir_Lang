@@ -25,7 +25,9 @@
 
 * Me
 - Alumno de Codeable (2do cohort)
-- Aprendi a usar Elixir antes que Ruby.
+- Coach en MakerLab.
+- Software Enginneer en Able.
+- Experiencia en ELixir.
   - Side-Projects y trabajos freelancer.
 
 * ¿Por qué fue creado?
