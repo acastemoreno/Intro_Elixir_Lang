@@ -417,7 +417,7 @@ BEAM (Erlang VM) no es un sistema operativo de proposito general.
   :ARTICLE: flexbox vleft auto-fadein line-through
   :END:
 #+BEGIN_QUOTE
-El proposito general de BEAM es ser un lugar solido donde ejecutar codigo.
+El objetivo de BEAM es ser un lugar solido donde ejecutar codigo.
 #+END_QUOTE
 
 * Actors (Procesos BEAM)
