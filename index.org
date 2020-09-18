@@ -26,7 +26,7 @@
 * Me
 - Alumno de Codeable (2do cohort)
 - Coach en MakerLab.
-- Software Enginneer en Able.
+- Software Engineer en Able.
 - 6 Experiencia en Elixir.
   - Side-Projects y trabajos freelancer.
 
