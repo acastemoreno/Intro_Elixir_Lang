@@ -475,7 +475,7 @@ El objetivo de BEAM es ser un lugar solido donde ejecutar codigo.
 
 - Telemetry (DEMO)
 
-- Livew View
+- Live View
 
 * Comunidad
 #+BEGIN_CENTER
